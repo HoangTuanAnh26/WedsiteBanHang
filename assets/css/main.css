@@ -405,7 +405,7 @@
 }
 
 .auth-form__policy-text {
-    font-size: 1,3rem;
+    font-size: 1.3rem;
     line-height: 1.3rem;
     text-align: center;
     padding: 0 12px;
@@ -443,7 +443,7 @@
     background-color: #3A5A98;
 }
 
-.auth-form__socials--facebook
+.auth-form__socials--facebook/* Đoạn css này có vẻ thừa */
 .auth-form__socials--icon {
     color: var(--white-color);
 }
@@ -471,7 +471,7 @@
 .auth-form__help-separate {
     display: block;
     height: 18px;
-    margin: 0px 16px 0;
+    margin: 0 16px 0;
     border-left: 1px solid #EAEAEA;
 }
 
@@ -632,7 +632,7 @@
 }
 
 .header__cart-view-cart {
-    float: right;
+    float: right;/* Biến nút chiếm hết chiều ngang của giỏ hàng ngắn lại */
     margin: 0 12px 12px 0;
 }
 
