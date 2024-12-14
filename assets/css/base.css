@@ -4,6 +4,7 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+    --star-gold-color: #FFCE3E;
     
     --header-height: 130px;
     --nabar-height: 46.5px;
@@ -54,7 +55,8 @@ html {
     line-height: 1.6rem;
     box-sizing: border-box;    
 }
-  
+
+/* Responsive */
 .grid{
     width: 1200px;
     max-width: 100%;
@@ -68,7 +70,29 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -5px;/* Tạo ra phần khoảng cách 10px cho các Column */
+    margin-right: -5px;
 }
+
+/* Test */
+.grid__column-2 {
+    padding-left: 5px;/* Tạo ra phần khoảng cách 10px cho các Column */
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;/* Tạo ra phần khoảng cách 10px cho các Column */
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
 
 /* Animation Tạo hiệu ứng mà qr_code hiện lên dần dần*/
 @keyframes fadeIn {
@@ -112,7 +136,7 @@ html {
     padding: 0 12px;
     cursor: pointer;
     background-color: var(--white-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 1.6rem;
@@ -135,3 +159,68 @@ html {
     cursor: default;
     background-color: #c3c3c3;
 } 
+
+/* Selection: Lựa chọn */ 
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 28px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__list::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 100%;
+    height: 10px;
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* Cần tạo cầu cho .select-input__list */
